@@ -9,7 +9,7 @@ for pi in $PING ; do
 		echo "$pi is alive"
 		continue
 	else 
-		echo "$pi is dead"
+		echo "$pi is not alive"
 	fi
 
 done
