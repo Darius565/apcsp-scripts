@@ -4,12 +4,14 @@ PING="rpi01 rpi02 rpi03 rpi04 rpi05 rpi06 rpi07 rpi08 rpi09 rpi10 rpi11 rpi12 rp
 
 
 for pi in $PING ; do
-	ping -c 1 $PING > /dev/null 2>&1 
-	if  [$? -eq 0] ; then
-		echo "$pi is alive"
-		continue
-	else 
-		echo "$pi is not alive"
+	ping -c 1 $PING > /dev/null 2>&1
+	if  [ $? -eq  0 ]
+then
+	echo "$pi is alive"
+
+else
+	echo "$pi is dead"
+
 	fi
 
 done
